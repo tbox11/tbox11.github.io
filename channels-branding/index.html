@@ -1,0 +1,173 @@
+
+
+<!DOCTYPE HTML>
+	<head>
+
+		<meta charset="utf-8">
+
+		<title>iPlayer TV Channels Scroll - Proto.io</title>
+
+
+			<meta name="HandheldFriendly" content="True">
+			<meta name="MobileOptimized" content="1280">
+
+
+
+			<meta name="viewport" content="width=device-width, minimum-scale=1.00, maximum-scale=1.00, initial-scale=1.00, user-scalable=no, target-densitydpi=device-dpi, shrink-to-fit=no, viewport-fit=cover" />
+
+
+
+			<meta name="format-detection" content="telephone=no">
+
+
+
+
+			<link rel="shortcut icon" href="apple-touch-icon.png">
+
+
+
+			<meta http-equiv="cleartype" content="on">
+
+
+
+				<link rel="stylesheet" href="./stylesheets/player-engine-export-min.css" />
+				<script type="text/javascript" src="./scripts/player-engine-export-min.js"></script>
+
+
+
+			<script type="text/javascript" src="./libraries/common/components.js"></script>
+			<link type="text/css" rel="Stylesheet" href="./libraries/common/components.1.00.css" />
+
+
+				<script type="text/javascript" src="./data/data.js"></script>
+
+			    <script type="text/javascript" src="./scripts/plugins/bodymovin/bodymovin.min.js"></script>
+			     <script type="text/javascript" src="./bodymovin/bodymovinAnimations.js"></script>
+
+		<style>
+			body { width: 1280px; height: 720px; }
+			.landscape, .landscape .prx-page { min-height: 1280px; }
+			.portrait, .portrait .prx-page { min-height: 720px; }
+		</style>
+
+		<script type="text/javascript">
+
+			prx.url.account = 'https://bbcuxd.proto.io';
+			prx.url.staticassets = 'https://gal.proto.io';
+			prx.url.devices = 'https://dteyv52hbg2at.cloudfront.net/devices';
+			prx.url.static = 'https://dteyv52hbg2at.cloudfront.net';
+			prx.url.siteurl = 'proto.io';
+			prx.url.crossmsg = 'https://bbcuxd.proto.io';
+
+			prx.nodejsassetsserver = {};
+			prx.nodejsassetsserver.host = ".proto.io";
+			prx.nodejsassetsserver.subdomainprefix = "https://at";
+			prx.nodejsassetsserver.maxsubdomains = "20";
+
+			prx.device_library = 'common';
+			prx.devices[prx.device] = {
+				name: prx.device
+				,defaultOrientation: 'landscape'
+				,portrait_applies: 1 //new
+				,portrait: [720,1280]
+				,landscape_applies: 1 //new
+				,landscape: [1280,720]
+				,allow_orientation_change: 1 //new
+				,statusbar_skin: 'default' // new
+				,statusbarheightportrait: 0
+				,statusbarheightlandscape: 0
+				,navigationbar_skin: 'default' //new
+				,navigationbarheightportrait: 0
+				,navigationbarheightlandscape: 0
+				,normalportrait: [720,1280]
+				,normallandscape: [1280,720]
+				,device_s3bucket: '557cc4d9-fb48-462f-86bd-60da7212fdae'
+				,dpr: '1.00'
+				,deviceType: "default"
+				,showiPhoneXNotch: false
+				,scrollType: "default"
+				,initialscale: 1.00
+				,targetdensitydpi: "device-dpi"
+			}
+
+			prx.projectsettings.id = 'd1b55419-7822-45db-8231-b2176e73f4a2';
+			prx.projectsettings.s3b = 'uxd001-25933-proto';
+			prx.projectsettings.account = 'bbcuxd';
+			prx.projectsettings.statusbar = '0';
+			prx.projectsettings.statusbarapplies = '0';
+			prx.projectsettings.navigationbar = '0';
+			prx.projectsettings.navigationbarapplies = '0';
+			prx.projectsettings.initialpageid = -1;
+
+
+			prx.projectsettings.flashactions = 0;
+			prx.projectsettings.gatrackingcode = '';
+
+			prx.export2html = '1' == true;
+			prx.mobPlayer = 0;
+
+			prx.user.country = 'US';
+
+			prx.s3Links = [];
+			var sLinkedAssets = [];
+
+				sLinkedAssets["p_5a7ebc2008f0fec9fbcff5b1c10d4608"]="http://bbc.github.io/gel-iconography/";
+
+
+			prx.csrf_token = 'F2D253EB397AC31D155C555B2764D854E4D281FAB0A88133E05D1812BC535C45';
+
+
+
+
+                            prx.assetsAccessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkIjp7InVpZCI6Ii0xIiwicHJvamVjdF9pZCI6ImQxYjU1NDE5LTc4MjItNDVkYi04MjMxLWIyMTc2ZTczZjRhMiJ9LCJ2IjowLCJleHAiOjE1MjY2NjE1MjAsImlhdCI6MTUyNjQ4MTUyMH0.GK1fQtTrOR4DksEsr_WNZhipcYdjGKoao63w98fydig";
+
+			prx.iniPlayer.iniPreLoad();
+
+
+
+
+
+		</script>
+	</head>
+
+
+			<body class="player device-cursor-touch mobile-device-true" id="mbd" >
+
+
+				<div id="window-wrapper">
+					<div id="dragarea"></div>
+					<div id="statusbar"></div>
+					<div id="underlay" style=""></div>
+
+					<div class="prx-page" data-role="page" id="p-1" data-id="1"></div>
+
+					<div id="navigationbar"></div>
+					<div id="overlay"></div>
+					<div id="trash"></div>
+					<div id="quick-audios"></div>
+				</div>
+
+
+			<div id="loader-wrapper">
+
+				<div class="progress">
+					<div class="progress-bar"></div>
+				</div>
+				<div id="poweredby"></div>
+			</div>
+
+			<script type="text/javascript">
+			// On *any* keyup event
+			$(document).keyup(function(e) {
+
+			  e.preventDefault();
+
+			});
+			</script>
+
+
+
+			</body>
+
+
+</html>
