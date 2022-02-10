@@ -1,0 +1,132 @@
+
+<!DOCTYPE HTML>
+    <head>
+    <meta charset="utf-8">
+
+    <title>In-car Carplay: Sounds - Proto.io player</title>
+
+    
+				<link type="text/css" rel="stylesheet" href="./src/stylesheets/preview-export-min.css">
+				<script type="text/javascript" src="./src/scripts/preview-export-min.js"></script>
+			
+
+    <script type="text/javascript">
+        var prx = window.prx || {};
+        prx.orientation = 'landscape';
+        prx.orientations = {};
+        prx.orientations.portrait = 1;
+        prx.orientations.landscape = 1;
+        prx.project = {};
+        prx.project.id = '28d7a6e0-5a46-4eb6-b8ca-acdbb7d650cb';
+        prx.project.title = 'In-car Carplay: Sounds';
+        prx.project.version = 0;
+        prx.project.livepreview = 0;
+        prx.project.account = "bbcuxd";
+        prx.activePage = {};
+        prx.usercountry = "us";
+        
+            prx.user = false;
+        
+        prx.skin = 'default';
+        prx.ver = '6.7.14.2';
+        //prx.flashactions = 1;
+		prx.flashactions = 1; //we are not using the DB value anymore
+
+        prx.nodejsassetsserver = {};
+        prx.nodejsassetsserver.host = ".proto.io";
+        prx.nodejsassetsserver.subdomainprefix = "https://a3";
+        prx.nodejsassetsserver.maxsubdomains = "20";
+        prx.account = "bbcuxd";
+        prx.browserShowScreenshots = 'true';
+        prx.url.crossmsg = 'https://bbcuxd.proto.io';
+        prx.playerUrl = 'https://bbcuxd.proto.io/player/';
+        prx.fullScreenUrl = 'https://bbcuxd.proto.io/player/fullscreen/index.cfm?id=28d7a6e0-5a46-4eb6-b8ca-acdbb7d650cb';
+        prx.spaces = false;
+        prx.csrf_token = 'F9E0CF6175288BD9D3F39395BA4B72901F53F6C6D9C44C002F1C532797A3B376';
+
+        prx.bShowPlayerBetaPrompt = false;
+
+        
+
+    </script>
+
+    
+
+</head>
+
+
+<body style="background-color:#FFFFFF">
+
+    
+
+    <div class="page-sidebar">
+        
+        <div class="sidebar-action-buttons">
+
+            
+                <span class="header-action-button player-icon-reload embed-icon-reload" id="refresh-preview">
+                    <span class="tooltip">Refresh preview</span>
+                </span>
+                
+                    <span  class="header-action-button player-icon-rotate embed-icon-rotate" id="change-orientation">
+                        <span class="tooltip">Change orientation</span>
+                    </span>
+                
+
+            <div class="header-action-button player-icon-enter-fullscreen-mode-icon" id="go-fullscreen">
+                <span class="tooltip">Go full screen</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="maincontent" class="landscape">
+
+        <div id="shortcut-pressed-outer">
+            <div id="shortcut-pressed"></div>
+        </div>
+        
+
+			<div class="frame_generic">
+				
+				<div class="body_generic skin_default skin-wrapper skin-os-default skin-device-phone skin-model- skin-size-1 skin-color-white skin-orientation-landscape skin-dimensions-800-480">
+
+					<div class="buttons top"></div>
+					<div class="detail-top"></div>
+					<div class="web-search"></div>
+					<div class="buttons left"></div>
+
+					<div class="body_generic_inner">
+						
+						<iframe id="pio-playerframe" src="./src/index.html" scrolling="NO" style="width: 800px; height: 480px;" webkitAllowFullScreen mozallowfullscreen allowFullScreen allowvr allow="autoplay"></iframe>
+						
+                                <script type="text/javascript">
+                                    // remove parameter from address bar immediately if no changes
+                                    let url = new URL(window.location.href);
+                                    url.searchParams.delete('hc');
+									url.searchParams.delete('ap');
+                                    window.history.replaceState({}, document.title, url.toString());
+                                </script>
+                            
+					</div>
+
+					<div class="buttons right"></div>
+					<div class="detail-bottom"></div>
+				</div>
+				
+			</div>
+		
+    </div>
+
+    
+
+    
+            <div id="branding"></div>
+        
+</body>
+
+
+<script type="text/javascript">
+    
+</script>
+</html>
