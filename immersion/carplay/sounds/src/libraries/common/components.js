@@ -993,32 +993,47 @@ prx.types.symbol = {
                 }
             },
             {
-                caption: 'Show scrollbars on scroll'
+                caption: 'Scrollbars'
                 ,name: 'scrollbars'
-                ,type: 'onoff'
+                ,type: 'select'
+                ,values: [{value: 'OFF',displayValue: 'Don\'t show scrollbars'},{value: 'FADE',displayValue: 'Visible on scroll only'},{value: 'ALWAYS',displayValue: 'Always visible'}]
                 ,value: function(item,name) {
-                    if(typeof(item.scrollbars) == 'undefined') {
+
+                    let _scrollbars = item.scrollbars;
+
+                    // previous compatibility - from hscrollbar and vscrollbar to plain scrollbar
+                    // it would be a true/false value of whether scrollbar would be visible - on scroll only
+                    if(typeof(_scrollbars) == 'undefined') {
                         switch (item.scroll) {
-                        case 'omni':
-                            var _scrollbars = (eval(item.hscrollbar) || eval(item.vscrollbar)) ? true : false;
-                            break;
-                        case 'horizontal':
-                            var _scrollbars = (eval(item.hscrollbar)) ? true : false;
-                            break;
-                        case 'vertical':
-                            var _scrollbars = (eval(item.vscrollbar)) ? true : false;
-                            break;
-                        default:
-                            break;
+                            case 'omni':
+                                _scrollbars = (eval(item.hscrollbar) || eval(item.vscrollbar)) ? true : false;
+                                break;
+                            case 'horizontal':
+                                _scrollbars = (eval(item.hscrollbar)) ? true : false;
+                                break;
+                            case 'vertical':
+                                _scrollbars = (eval(item.vscrollbar)) ? true : false;
+                                break;
+                            default:
+                                break;
                         }
-                        return _scrollbars;
                     }
-                    return item.scrollbars;
+
+                    // new compatibility - want to convert scrollbar to select so that you can choose between
+                    // "off", "visible on scroll only" and "always visible"
+                    switch(_scrollbars) {
+                        case(false):
+                            return "OFF";
+                        case(true):
+                            return "FADE";
+                        default:
+                            return _scrollbars;
+                    }
                 }
                 ,onChange: function(item) {
-                    if(item.scroll =='vertical' && prx.devices[prx.device].deviceType == 'applewatch' && item.scrollbars == true){
+                    if(item.scroll =='vertical' && prx.devices[prx.device].deviceType == 'applewatch' && (item.scrollbars == 'FADE' || item.scrollbars == 'ALWAYS')) {
                         $('#property-watchOSscrollbars').show();
-                    }else{
+                    } else {
                         $('#property-watchOSscrollbars').hide();
                     }
                 }
